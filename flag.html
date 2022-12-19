@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flags</title>
+  <link rel="stylesheet" href="flag.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="flag">
+            <div id="input">
+                <label for="">Country Name's</label><input type="text" placeholder="Enter Country Name">
+            </div>
+    
+            <div id="button">
+                <button type="submit">Get Country Flag</button>
+            </div>
+        </div>
+
+        <div id="img"></div>
+    </div>
+
+
+<script>
+    let input = document.querySelector("input")
+    let button = document.querySelector("button")
+    let flag = document.querySelector("#img")
+
+    button.onclick= function(e){
+        e.preventDefault()
+        let countryLower = input.value.toLowerCase()
+        console.log(countryLower)
+        let countryNamesplitted = countryLower.split('')
+        console.log(countryNamesplitted)
+        let countryUpper = input.value[0].toUpperCase()
+        console.log(countryUpper)
+        console.log(countryNamesplitted.splice(0,1, countryUpper))
+        // document.write(countryName)
+        // console.log(countryName.join(''))
+
+        // fetch('https://flagcdn.com/en/codes.js   `   on')
+        // .then(function())
+    }
+</script>
+
+</body>
+
+</html>
